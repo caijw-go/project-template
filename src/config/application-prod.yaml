@@ -1,0 +1,20 @@
+server:
+  name: service # 项目名称
+  address: 0.0.0.0:8080 # 启动后项目地址
+  isProd: true # 是否是生产环境
+sentryDsn: # sentry地址，不需要可以不配置
+log:
+  path: /data/log/ # log目录
+mysql: # 数据库配置信息，可以配置多个
+  default:
+    address: "root:123456@tcp(127.0.0.1:3306)/test?charset=utf8mb4&parseTime=True&loc=Local"
+    maxIdle: 3 #最大空闲连接数
+    maxOpen: 20 #最大连接数
+    logMode: true #是否打印sql日志
+redis: # redis配置信息，可以配置多个
+  default:
+    address: "127.0.0.1:6379"
+    password: ""
+    db: 0
+    poolSize: 5 #连接池最大数量
+
